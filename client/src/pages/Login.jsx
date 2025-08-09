@@ -23,27 +23,38 @@ export default function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <form onSubmit={handleLogin} className="p-6 border rounded">
-        <h2 className="mb-4 text-lg font-bold">Login</h2>
-        <input
-          className="border p-2 w-full mb-2"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          className="border p-2 w-full mb-2"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button className="bg-blue-500 text-white p-2 w-full">Login</button>
-        <p className="mt-2 text-sm">
-          Don't have an account? <Link to="/register" className="text-blue-600">Register</Link>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
+      <div className="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-sm transform transition duration-300 hover:scale-105">
+        <h2 className="text-3xl font-extrabold text-gray-800 mb-6 text-center">
+          Welcome Back 👋
+        </h2>
+        <form onSubmit={handleLogin} className="space-y-4">
+          <input
+            className="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            className="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button
+            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold p-3 w-full rounded-lg transition duration-200"
+          >
+            Login
+          </button>
+        </form>
+        <p className="mt-4 text-sm text-center text-gray-600">
+          Don't have an account?{" "}
+          <Link to="/register" className="text-indigo-600 hover:underline">
+            Register
+          </Link>
         </p>
-      </form>
+      </div>
     </div>
   );
 }

@@ -23,27 +23,38 @@ export default function Register() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <form onSubmit={handleRegister} className="p-6 border rounded">
-        <h2 className="mb-4 text-lg font-bold">Register</h2>
-        <input
-          className="border p-2 w-full mb-2"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          className="border p-2 w-full mb-2"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button className="bg-green-500 text-white p-2 w-full">Register</button>
-        <p className="mt-2 text-sm">
-          Already have an account? <Link to="/" className="text-blue-600">Login</Link>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
+      <div className="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-sm transform transition duration-300 hover:scale-105">
+        <h2 className="text-3xl font-extrabold text-gray-800 mb-6 text-center">
+          Create Account 🚀
+        </h2>
+        <form onSubmit={handleRegister} className="space-y-4">
+          <input
+            className="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            className="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button
+            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold p-3 w-full rounded-lg transition duration-200"
+          >
+            Register
+          </button>
+        </form>
+        <p className="mt-4 text-sm text-center text-gray-600">
+          Already have an account?{" "}
+          <Link to="/" className="text-indigo-600 hover:underline">
+            Login
+          </Link>
         </p>
-      </form>
+      </div>
     </div>
   );
 }
