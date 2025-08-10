@@ -1,12 +1,28 @@
-# React + Vite
+# Client (React) – Link Saver
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Implements UI for:
+- Authentication (login / register)
+- Bookmark list with auto summaries
+- Tag filtering
+- Dark mode toggle (persisted to localStorage)
+- Drag & drop reordering (HTML5 DnD API)
 
-Currently, two official plugins are available:
+## Development
+1. `npm install`
+2. `npm run dev`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ensure backend running at `http://localhost:5000` or adjust fetch URLs in `pages/` components.
 
-## Expanding the ESLint configuration
+## Environment
+No env vars required on client currently. Uses localStorage for:
+- `token` (JWT)
+- `theme` (light | dark)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Structure
+`src/pages/` route components: Login, Register, Dashboard.
+
+## Future Enhancements
+- Extract API layer
+- Add optimistic updates & skeleton loaders
+- Use React Query / TanStack Query for caching
+- Convert to Next.js for SSR & edge caching
