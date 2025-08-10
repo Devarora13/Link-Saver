@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { MdLightMode, MdDarkMode } from "react-icons/md";
+import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 
 export default function Dashboard() {
   const [url, setUrl] = useState("");
@@ -122,7 +122,7 @@ export default function Dashboard() {
         </div>
         <div className="flex gap-2 mb-4">
           <button onClick={toggleTheme} className="px-3 py-2 rounded-lg bg-indigo-500 text-white text-sm">
-            {dark ? <MdLightMode size={20}/> : <MdDarkMode size={20}/>}
+            {dark ? <MdOutlineLightMode size={20}/> : <MdOutlineDarkMode size={20}/>}
           </button>
           <input
             value={filterInput}
