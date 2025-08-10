@@ -1,6 +1,6 @@
 # 🔗 Link Saver + Auto-Summary
 
-A full-stack bookmark management application with AI-powered summaries, built for the take-home assignment.
+A full-stack web app to save and organize links with automatic titles, favicons, and AI-generated summaries — plus tags, dark mode, and drag-and-drop reordering.
 
 ## 🌟 Live Demo
 
