@@ -103,10 +103,16 @@ Link-Saver/
 │   │   └── assets/        # Static assets
 │   └── public/
 ├── server/                # Node.js backend
-│   ├── controllers/       # Business logic
+│   ├── controllers/       # Business logic controllers
 │   ├── middleware/        # Express middleware
 │   ├── routes/           # API route handlers
-│   └── db.json           # JSON database
+│   ├── src/
+│   │   └── app.js        # Express app configuration
+│   ├── tests/            # Backend tests
+│   ├── .env              # Environment variables
+│   ├── db.json           # JSON database
+│   ├── package.json      # Backend dependencies
+│   └── server.js         # Server entry point
 ├── screenshots/           # Application screenshots
 └── README.md
 ```
@@ -210,4 +216,4 @@ npm test
 
 ---
 
-*Built with ❤️
+*Built with ❤️*
